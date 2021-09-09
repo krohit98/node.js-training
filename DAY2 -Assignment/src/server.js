@@ -24,11 +24,10 @@ productStoreApp.get("/getproducts",async (req,res)=>{
             let response = await axios.get('https://fakestoreapi.com/products');
             let result = response.data.slice(0,10)
             products = [...result]
+            res.render("index.ejs",{data:products})
         } catch(error){
             console.error(error);
-        }
-
-        res.render("index.ejs",{data:products})
+        }    
 });
 
 // URL mapped to a form for adding a new product
@@ -57,12 +56,10 @@ productStoreApp.post('/postproduct',async (req,res)=>{
         let result = response.data.slice(0,10)
         products = [...result]  
         products.push(newProduct) 
+        res.render('index.ejs', {data: products})
     }catch(error){
         console.error(error);
     };
-
-    res.render('index.ejs', {data: products});
-
 });
 
 
