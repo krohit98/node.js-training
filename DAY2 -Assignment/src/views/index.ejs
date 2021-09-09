@@ -23,7 +23,7 @@
             </tr>  
         </thead>
         <tbody>
-            <% data.forEach((item)=>{ %>
+            <% productData.forEach((item)=>{ %>
                 <tr>
                     <td><%= item.id%></td>
                     <td><%= item.title%></td>
@@ -33,6 +33,46 @@
                     <td><img width="80px" src=<%= item.image %>></td>
                     <td><%= item.rating.rate%></td>
                     <td><%= item.rating.count%></td>
+                </tr>
+            <%});%>
+        </tbody>
+    </table>
+
+    <h1 class="display-3 m-2">Users</h1>
+    <table class="table table-striped m-2">
+        <thead>
+            <tr class="bg-dark text-white">
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>City</th>
+                <th>Street</th>
+                <th>Number</th>
+                <th>Zipcode</th>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Phone</th>
+            </tr>  
+        </thead>
+        <tbody>
+            <% userData.forEach((item)=>{ %>
+                <tr>
+                    <td><%= item.address.geolocation.lat%></td>
+                    <td><%= item.address.geolocation.long%></td>
+                    <td><%= item.address.city%></td>
+                    <td><%= item.address.street%></td>
+                    <td><%= item.address.number%></td>
+                    <td><%= item.address.zipcode %></td>
+                    <td><%= item.id%></td>
+                    <td><%= item.email%></td>
+                    <td><%= item.username%></td>
+                    <td><%= item.password%></td>
+                    <td><%= item.name.firstname%></td>
+                    <td><%= item.name.lastname%></td>
+                    <td><%= item.phone%></td>
                 </tr>
             <%});%>
         </tbody>
