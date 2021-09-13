@@ -114,7 +114,7 @@ productStoreApp.post('/postproduct',async (req,res)=>{
         let result = response.data.slice(0,10)
         products = [...result]  
         products.push(newProduct) 
-        res.render('index.ejs', {productData: products})
+        res.render('index2.ejs', {productData: products})
     }catch(error){
         console.error(error);
     };

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="container">
+    <h1 class="display-3 m-2">Products</h1>
+    <table class="table table-striped m-2">
+        <thead>
+            <tr class="bg-dark text-white">
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Rate</th>
+                <th>Count</th>
+            </tr>  
+        </thead>
+        <tbody>
+            <% productData.forEach((item)=>{ %>
+                <tr>
+                    <td><%= item.id%></td>
+                    <td><%= item.title%></td>
+                    <td><%= item.price%></td>
+                    <td><%= item.description%></td>
+                    <td><%= item.category%></td>
+                    <td><img width="80px" src=<%= item.image %>></td>
+                    <td><%= item.rating.rate%></td>
+                    <td><%= item.rating.count%></td>
+                </tr>
+            <%});%>
+        </tbody>
+    </table>
+</body>
+</html>
