@@ -28,9 +28,9 @@ MongoClient.connect(connString, (err,client)=>{
 
     //making route to create imp info
     serverApp.post('/createEmp',(req,res)=>{
-    usersCollection.insertOne(req.body)
-    .then(result=>res.redirect('/getEmp'))
-    .catch(error=>console.error(error))
+        usersCollection.insertOne(req.body)
+        .then(result=>res.redirect('/getEmp'))
+        .catch(error=>console.error(error))
     }); 
 
     //making route to get emp info

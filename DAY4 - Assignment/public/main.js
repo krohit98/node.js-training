@@ -25,13 +25,11 @@ updateButton.addEventListener('click', () => {
     fetch('/updateEmp',payload)
     .then(result=>{
         if(result.ok) {
-            alert('Employee name updated!')
             return result.json()
         }
     })
     .then(response=>{
-        if(response === 'update op failed')
-        console.log(response);
+        window.location.reload();
     })
     .catch(error => console.log(error));
     
