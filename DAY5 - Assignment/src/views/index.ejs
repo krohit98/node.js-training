@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Todo App</title>
+</head>
+<body class="container pt-3">
+    <h1 class="display-3">TODO APP</h1>
+    <div class="d-flex pt-2">
+    <div id="todoAppInterface" class="col-5">
+        <form action="/postTodo" method="POST" class="mb-5">
+            Enter new task: <input id="item" name="item" type="text" class="form-control"><br>
+            <input type="submit" value="Create a task" class="btn btn-primary">
+        </form>
+        <div class="mb-5">
+            Enter ID to update: <input id="updateId" name="updateId" type="text" class="form-control"><br>
+            Enter new task: <input id="updateItem" name="updateItem" type="text" class="form-control"><br>
+            <input id="updatebtn" type="submit" value="Update task" class="btn btn-primary">
+        </div>
+        <div class="mb-5">
+            Enter ID to delete: <input id="deleteId" name="deleteId" type="text" class="form-control"><br>
+            <input id="deletebtn" type="submit" value="Delete task" class="btn btn-danger">
+        </div>
+    </div>
+    <div id="todoAppTable" class="col-6 ms-5">
+        <table class="table table-striped">
+            <tr class="bg-dark text-white">
+                <th>Id</th>
+                <th>List Item</th>
+            </tr>
+            <% data.forEach((todo)=>{%>
+            <tr>
+                <td><%= todo._id %></td>
+                <td><%= todo.item %></td>
+            </tr>
+            <% }); %>
+        </table>
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

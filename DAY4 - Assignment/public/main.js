@@ -44,7 +44,7 @@ deleteButton.addEventListener("click", () => {
     const payload = {
         method: 'delete',
         headers: {'content-type':'application/json'},
-        body:JSON.stringify({name:deleteName})
+        body:JSON.stringify({name:deleteName,})
     }
     fetch('/deleteEmp',payload)
     .then(result=>{
