@@ -4,14 +4,24 @@ const express = require("express");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const auth = require("./middleware/auth");
+const parser = require("body-parser");
 
 const app = express();
 
 app.use(express.json());
+app.use(express.static("public"));
+app.set('views','./views');
+app.set('view engine','ejs');
+app.use(parser.json());
+app.use(parser.urlencoded({extended:false}));
 
 // Logic goes here
 // importing user context
 const User = require("./model/user");
+
+app.get("/",(req,res)=>{
+  res.render('index.ejs');
+})
 
 app.post("/welcome",auth, (req, res) => {
     res.status(200).send("Welcome 🙌 ");
@@ -24,8 +34,7 @@ app.post("/register", async (req, res) => {
     try {
       // Get user input
       const { first_name, last_name, email, password } = req.body;
-  
-      // Validate user input
+      //Validate user input
       if (!(email && password && first_name && last_name)) {
         res.status(400).send("All input is required");
       }
@@ -61,7 +70,7 @@ app.post("/register", async (req, res) => {
       user.token = token;
   
       // return new user
-      res.status(201).json(user);
+      res.status(201).json({user});
     } catch (err) {
       console.log(err);
     }
@@ -74,8 +83,8 @@ app.post("/login", async (req, res) => {
     // Our login logic starts here
     try {
       // Get user input
-      const { email, password } = req.body;
-  
+      const { loginEmail:email, loginPassword:password } = req.body;
+
       // Validate user input
       if (!(email && password)) {
         res.status(400).send("All input is required");
@@ -97,9 +106,11 @@ app.post("/login", async (req, res) => {
         user.token = token;
   
         // user
-        res.status(200).json(user);
+        res.render('user.ejs',{data:user});
       }
-      res.status(400).send("Invalid Credentials");
+      else{
+        res.status(400).send("Invalid Credentials");
+      }
     } catch (err) {
       console.log(err);
     }

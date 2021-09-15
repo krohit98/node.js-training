@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Authentication</title>
+</head>
+<body class="container">
+    <div class="mb-5 col-6">
+        <h1 class="display-4 mb-3">Register</h1>
+        <div class="bg-dark p-5 text-white">
+            First Name: <input class="form-control" id="first_name" name="first_name" type="text"><br>
+            Last Name: <input class="form-control" id="last_name" name="last_name" type="text"><br>
+            Email: <input class="form-control" id="email" name="email" type="text"><br>
+            Password: <input class="form-control" id="password" name="password" type="text"><br>
+            <input id="register-btn" class="btn btn-primary" type="submit" value="Sign Up!">
+        </div>
+    </div>   
+    <div class="mb-5 col-6">
+        <h1 class="display-4 mb-3">Login</h1>
+        <form action="/login" method="POST" class="bg-dark p-5 text-white">
+            Email: <input class="form-control" id="loginEmail" name="loginEmail" type="text"><br>
+            Password: <input class="form-control" id="loginPassword" name="loginPassword" type="text"><br>
+            <input id="login-btn" class="btn btn-primary" type="submit" value="Sign In!">
+        </form>
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
