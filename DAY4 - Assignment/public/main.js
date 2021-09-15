@@ -11,7 +11,7 @@ retrieveButton.addEventListener('click',()=>{
     .catch(error=>{
         console.log(error);
     })
-})
+});
 
 updateButton.addEventListener('click', () => {
     //hit the update end point
@@ -36,7 +36,7 @@ updateButton.addEventListener('click', () => {
     updateName.value="";
     updateNameTo.value="";
 
-})
+});
 
 deleteButton.addEventListener("click", () => {
     //hit the delete end point

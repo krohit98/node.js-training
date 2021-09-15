@@ -8,7 +8,6 @@ const parser = require("body-parser");
 
 const app = express();
 
-app.use(express.json());
 app.use(express.static("public"));
 app.set('views','./views');
 app.set('view engine','ejs');
@@ -40,7 +39,7 @@ app.post("/register", async (req, res) => {
       }
   
       // check if user already exist
-      // Validate if user exist in our database
+      //Validate if user exist in our database
       const oldUser = await User.findOne({ email });
   
       if (oldUser) {
@@ -70,7 +69,7 @@ app.post("/register", async (req, res) => {
       user.token = token;
   
       // return new user
-      res.status(201).json({user});
+      res.status(200).json({user});
     } catch (err) {
       console.log(err);
     }
