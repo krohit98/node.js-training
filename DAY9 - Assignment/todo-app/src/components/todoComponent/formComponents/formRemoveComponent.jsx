@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import removeAction from '../../../actions/removeAction';
@@ -12,18 +12,22 @@ const FormRemove = ()=>{
 
     const dispatch = useDispatch();
 
+    const history = useHistory();
+
     const submitHandler = (e) =>{
         e.preventDefault();
         let data = currentState;
-        //console.log(data);
+        console.log(data);
         dispatch(removeAction(data));
+        history.push('/');
     }
 
     const changeHandler = () =>{
         const id=document.getElementById("deleteTask").value;
+        console.log(id);
         currentState.splice([id-1],1);
         const newState = currentState;
-        //console.log(currentState);
+        console.log(currentState);
         setNewState(newState);
     }
 
@@ -31,9 +35,7 @@ const FormRemove = ()=>{
         <form onSubmit = {submitHandler}>
             <label for="deleteTask">Enter Task ID to Delete: </label>
             <input id="deleteTask" type="text" onBlur={()=>changeHandler()}/>
-            <Link to="/">
             <button>Delete Task</button>
-            </Link>
         </form>
     )
 }
