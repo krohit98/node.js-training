@@ -1,0 +1,9 @@
+.list-btn{
+    border:none;
+    background:none;
+    color:white;
+}
+
+.list-btn:hover{
+    color:orange;
+}

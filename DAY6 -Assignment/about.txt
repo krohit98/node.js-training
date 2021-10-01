@@ -1,0 +1,7 @@
+Assignment Day 6
+
+This assignment was about integrating express with 
+json web token to provide signup and signin functionalities 
+to a web application.
+
+MongoDB has been used as database along with embedded js for UI.

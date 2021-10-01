@@ -1,0 +1,6 @@
+Assignment Day 4
+
+This assignment is about creating API endpoints for performing
+all the CRUD operations on data.
+
+MongoDB has been used as database.

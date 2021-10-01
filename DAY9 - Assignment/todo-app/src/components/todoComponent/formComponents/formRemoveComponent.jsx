@@ -29,6 +29,7 @@ const FormRemove = ()=>{
         const newState = currentState;
         console.log(currentState);
         setNewState(newState);
+        document.getElementByTag("deleteTask")
     }
 
     return(

@@ -1,0 +1,7 @@
+const restaurantsActionTypes = {
+    RESTAURANTS_REQUEST:"RESTAURANTS_REQUEST",
+    RESTAURANTS_SUCCESS:"RESTAURANTS_SUCCESS",
+    RESTAURANTS_FAIL:"RESTAURANTS_FAIL"
+}
+
+export default restaurantsActionTypes;

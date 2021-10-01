@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit testing RestaurantsPage component Snapshot testing 1`] = `
+<div
+  className="container pageDiv"
+>
+  <h1
+    className="display-2 pageHeading"
+  >
+    List of Places
+  </h1>
+  <RestaurantTable />
+</div>
+`;

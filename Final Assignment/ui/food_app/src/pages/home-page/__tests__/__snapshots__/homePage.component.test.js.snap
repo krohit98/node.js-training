@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit testing HomePage component Snapshot testing 1`] = `
+<div
+  className="pageDiv homePageDiv"
+>
+  <h1
+    className="display-1 pageHeading"
+  >
+    Welcome to Food Service
+  </h1>
+  <div
+    className="getList-btn-div"
+  >
+    <button
+      className="getList-btn app-btn"
+      onClick={[Function]}
+    >
+      Discover Food Joints
+    </button>
+  </div>
+</div>
+`;

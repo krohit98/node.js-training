@@ -1,0 +1,19 @@
+.homePageDiv{
+    display:flex;
+    flex-direction:column;
+}
+
+.getList-btn-div{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.getList-btn{
+    border:none;
+    border-radius:5px;
+    font-size:larger;
+    padding: 3% 6%;
+    height:100px;
+}

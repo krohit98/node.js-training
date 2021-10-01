@@ -1,0 +1,7 @@
+Assignment Day 2
+
+This assignment is about building api endpoints for fetching 
+products from a third party api and then displaying the data
+in an embedded js UI.
+
+GET and POST operations are performed.

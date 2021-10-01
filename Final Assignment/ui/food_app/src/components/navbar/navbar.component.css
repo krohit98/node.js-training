@@ -1,0 +1,21 @@
+.header-nav{
+    display:flex;
+    justify-content:space-between;
+    font-size:large;
+    background: rgb(0, 64, 93);
+    width:100%;
+}
+
+.header-btn{
+    border:none;
+    background:none;
+    color:white;
+}
+
+.header-btn:hover{
+    color:rgb(118, 177, 255);
+}
+
+#userInfo{
+    color:orange;
+}

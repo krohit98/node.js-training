@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit testing LoginPage component Snapshot testing 1`] = `
+<div
+  className="pageDiv"
+>
+  <h1
+    className="display-3 pageHeading"
+  >
+    Sign-In to an Existing Account
+  </h1>
+  <LoginForm
+    submitHandler={[Function]}
+  />
+  
+</div>
+`;

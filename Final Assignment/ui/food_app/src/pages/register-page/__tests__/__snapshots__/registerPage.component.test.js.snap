@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit testing RegisterPage component Snapshot testing 1`] = `
+<div
+  className="pageDiv"
+>
+  <h1
+    className="display-3 pageHeading"
+  >
+    Sign-Up for a New Account
+  </h1>
+  <RegisterForm
+    submitHandler={[Function]}
+  />
+  
+</div>
+`;

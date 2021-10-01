@@ -1,0 +1,5 @@
+Assignment Day 8
+
+This assignment is about developing a simple react application.
+The application should fetch a list of products from a third 
+party API and display the data in a table.

@@ -1,0 +1,8 @@
+Assignment Day 5
+
+This assignment is about developing a todo app using express
+as the framework for backend development along with mongoDB
+as the database. 
+
+All the CRUD operations have been performed and embedded js 
+has been used to build the frontend UI for the application.
